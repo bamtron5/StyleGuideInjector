@@ -1,0 +1,24 @@
+{
+  "name": "RWeb-StyleGuide",
+  "version": "0.0.0",
+  "description": "bower components for RWEB",
+  "main": "index.html",
+  "authors": [
+    "Brandon Morrison"
+  ],
+  "license": "MIT",
+  "homepage": "xome.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "2.0.3",
+    "bootstrap": "2.2.2",
+    "font-awesome": ">=4.1.0",
+    "jquery": "~2.1.4"
+  }
+}

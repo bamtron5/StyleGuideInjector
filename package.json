@@ -13,6 +13,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-inject": "^3.0.0",
     "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.1",
     "gulp-minify": "0.0.5",
     "gulp-minify-css": "^1.2.1",
     "gulp-prefix": "0.0.14",

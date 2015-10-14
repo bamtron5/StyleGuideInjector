@@ -8,10 +8,15 @@ var watch = require('gulp-watch');
 var rename = require('rename');
 var inject = require('gulp-inject');
 var bowerFiles = require('main-bower-files');
-var prefix = require('gulp-prefix');
+var livereload = require('gulp-livereload');
+livereload({ start: true });
+
 
 gulp.task('sass', function () {
-  	return gulp.src('./components/**/*.scss', {relative: true})
+	console.log('sass updating...');
+  	return gulp.src(['./components/**/*.scss', './client/**/*.scss'])
+  		.pipe(watch(['./components/**/*.scss', './client/**/*.scss']))
+  		.pipe(livereload())
 	    .pipe(sass().on('error', sass.logError))
 	    .pipe(gulp.dest('./include/css'));
 });
@@ -20,8 +25,9 @@ gulp.task('sass', function () {
 gulp.task('index', function () {
 	var rootPath = 'RWeb-StyleGuide';
 	var sources = gulp.src([
-		'components/**/*.js', 
-		'include/**/*.css'
+		'include/client.css',
+		'include/**/*.css',
+		'components/**/*.js'
 	], {read: false});
 
     gulp.src('./index.html')
@@ -35,12 +41,19 @@ gulp.task('index', function () {
         }))
         .pipe(inject(sources, {addPrefix: rootPath}))
         .pipe(gulp.dest('./'));
+    console.log('index injection complete...');
 });
 
 gulp.task('clean', function(cb){
 	del(['include/*'], cb);
+	console.log('You have a clean include folder.');
 });
 
-gulp.task('default', ['clean', 'sass', 'index'], function() {
-	console.log('Sass rebuilt and cleaned.  Index injection complete.');
+gulp.task('watch', function(){
+	console.log('Watching for changes...');
+	livereload.listen();
+});
+
+gulp.task('default', ['clean','sass', 'index', 'watch'], function() {
+	
 });

@@ -1,0 +1,1 @@
+var componentName = "Hello World from JS file.";

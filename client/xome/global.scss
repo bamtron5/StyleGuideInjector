@@ -1,0 +1,22 @@
+*, *:after, *:before{
+	box-sizing: border-box;
+}
+
+body{
+	background: black;
+	&:after{
+		color: greenyellow;
+		font-size: 78px;
+		position: absolute;
+		top:0px;
+		left:0px;
+		line-height: 1em;
+	}
+
+	.jumbotron > img{
+		margin:auto; 
+		position: relative;
+		display: block;
+	}
+}
+

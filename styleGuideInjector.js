@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var include = [
 		'components/0001_componentName_v1.0.0/componentName.html',
 		'components/0002_componentName_v1.0.0/componentName.html',
+		'components/0003_componentName_v1.0.0/componentName.html'
 	];
 
 	for(var i = 0; i < include.length; i++){

@@ -25,8 +25,9 @@ gulp.task('sass', function () {
 gulp.task('index', function () {
 	var rootPath = 'RWeb-StyleGuide';
 	var sources = gulp.src([
-		'include/client.css',
-		'include/**/*.css',
+		'include/*.css',
+		'include/css/*.css',
+        'include/css/**/*.css',
 		'components/**/*.js'
 	], {read: false});
 

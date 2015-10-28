@@ -1,27 +1,25 @@
 <div class="container">
 	<h2>People</h2>
-	<ul data-bind="foreach: people" id="people">
-	    <li>
-	        <div>
-	            <span data-bind="text: name"> </span> has <span data-bind='text: children().length'>&nbsp;</span> children:
-	            <a href='#' data-bind='click: addChild '>Add child</a>
-	            <span class='renderTime' data-bind='visible: $root.showRenderTimes'>
-	                (person rendered at <span data-bind='text: new Date().getSeconds()' > </span>)
-	            </span>
-	        </div>
-	        <ul data-bind="foreach: children">
-	            <li>
-	                <span data-bind="text: $data"> </span>
-	                <span class='renderTime' data-bind='visible: $root.showRenderTimes'>
-	                    (child rendered at <span data-bind='text: new Date().getSeconds()' > </span>)
-	                </span>
-	            </li>
-	        </ul>
-	    </li>
-	</ul>
-	<label><input data-bind='checked: showRenderTimes' type='checkbox' /> Show render times</label> 
-	<script src="/RWeb-StyleGuide/bower_components/jquery/dist/jquery.js"></script>
-	<script src="/RWeb-StyleGuide/bower_components/knockout/dist/knockout.js"></script>
+		<ol data-bind="foreach: people" id="people">
+		    <li>
+		        <div>
+		            <span data-bind="text: name"> </span> has <span data-bind='text: children().length'>&nbsp;</span> children:
+		            <a href='#' data-bind='click: addChild '>Add child</a>
+		            <span class='renderTime' data-bind='visible: $root.showRenderTimes'>
+		                (person rendered at <span data-bind='text: new Date().getSeconds()' > </span>)
+		            </span>
+		        </div>
+		        <ul data-bind="foreach: children">
+		            <li>
+		                <span data-bind="text: $data"> </span>
+		                <span class='renderTime' data-bind='visible: $root.showRenderTimes'>
+		                    (child rendered at <span data-bind='text: new Date().getSeconds()' > </span>)
+		                </span>
+		            </li>
+		        </ul>
+		    </li>
+		</ol>
+		<label><input data-bind='checked: showRenderTimes' type='checkbox' /> Show render times</label> 
 	<script type="text/javascript" src="/RWeb-StyleGuide/components/0004_renderedKO_v1.0.0/renderedKO.model.js"></script>
 	<script type="text/javascript" src="/RWeb-StyleGuide/components/0004_renderedKO_v1.0.0/renderedKO.js"></script>
 </div>

@@ -1,0 +1,17 @@
+@mixin people(){
+	background:white;
+	padding: 15px 30px;
+
+	> li{
+		padding:5px;
+		margin-left:20px;
+		text-decoration: underline;
+		position: relative;
+		z-index: 1;
+		font-weight: bold;
+
+		&:last-child{
+			margin-bottom:0px;
+		}
+	}
+}

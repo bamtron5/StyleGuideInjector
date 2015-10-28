@@ -28,7 +28,7 @@ gulp.task('index', function () {
 		'./include/*.css',
 		'./include/css/*.css',
         './include/css/**/*.css'
-	], {read: false});
+	], {read: true});
 
     gulp.src('./index.html')
     	

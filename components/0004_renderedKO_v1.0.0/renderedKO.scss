@@ -1,4 +1,8 @@
 //sassComponentFile0004
+@import "../../client/xome/mixins.scss";
+
+
 #people{
 	background:white;
+	@include people();
 }

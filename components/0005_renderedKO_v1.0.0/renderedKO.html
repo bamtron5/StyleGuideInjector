@@ -3,7 +3,7 @@
 	<ol data-bind="foreach: viewModel.people" id="people0005">
 	    <li><span data-bind="text:firstname"></span> <span data-bind="visible: $root.viewModel.showLastName, text:lastname"></span></li>
 	</ol>
-	<label data-bind="click: viewModel.clickLastName"><input data-bind='checked: viewModel.showLastName' type='checkbox'/> Show render times</label>
+	<label><input data-bind='checked: function(){$root.viewModel.showLastName}' type='checkbox'/> Show render times</label>
 	<button class="btn btn-warn" data-bind="click:viewModel.clickLastName">Click this</button>
 	<script type="text/javascript" src="/RWeb-StyleGuide/components/0005_renderedKO_v1.0.0/renderedKO.model.js"></script>
 	<script type="text/javascript" src="/RWeb-StyleGuide/components/0005_renderedKO_v1.0.0/renderedKO.js"></script>

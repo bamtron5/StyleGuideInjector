@@ -1,0 +1,29 @@
+section:nth-child(-n+4){
+	display: none;
+}
+
+ol#people0005{
+	background:white;
+	padding-left:0px;
+	font-family: "Arial";
+
+	> li{
+		padding:5px;
+		text-decoration: underline;
+		position: relative;
+		z-index: 1;
+		font-weight: bold;
+		&:after{
+		    content: "";
+		    background: gray;
+		    width: 30px;
+		    height: 30px;
+		    position: absolute;
+		    border-radius: 100px;
+		    top: 0px;
+		    left: -29px;
+		    z-index: -1;
+		    box-shadow: -2px 1px 6px brown;
+		}
+	}
+}

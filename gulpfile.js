@@ -25,10 +25,9 @@ gulp.task('sass', function () {
 gulp.task('index', function () {
 	var rootPath = 'RWeb-StyleGuide';
 	var sources = gulp.src([
-		'include/*.css',
-		'include/css/*.css',
-        'include/css/**/*.css',
-		'components/**/*.js'
+		'./include/*.css',
+		'./include/css/*.css',
+        './include/css/**/*.css'
 	], {read: false});
 
     gulp.src('./index.html')
@@ -46,8 +45,8 @@ gulp.task('index', function () {
 });
 
 gulp.task('clean', function(cb){
+    console.log('You have a clean include folder.');
 	del(['include/*'], cb);
-	console.log('You have a clean include folder.');
 });
 
 gulp.task('watch', function(){

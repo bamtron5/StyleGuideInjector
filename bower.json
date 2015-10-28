@@ -19,6 +19,8 @@
     "bootstrap-sass-official": "2.0.3",
     "bootstrap": "2.2.2",
     "font-awesome": ">=4.1.0",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "knockout": "~3.3.0",
+    "skeleton": "~2.0.4"
   }
 }
